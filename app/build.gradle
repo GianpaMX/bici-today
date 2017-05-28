@@ -1,5 +1,5 @@
-apply plugin: 'com.android.application'
-apply plugin: 'com.neenbedankt.android-apt'
+apply plugin: "com.android.application"
+apply plugin: "com.neenbedankt.android-apt"
 
 android {
     compileSdkVersion 25
@@ -15,28 +15,29 @@ android {
     buildTypes {
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
     }
 }
 
 dependencies {
-    final DAGGER_VERSION = '2.10'
+    final DAGGER_VERSION = "2.10"
 
     apt "com.google.dagger:dagger-compiler:$DAGGER_VERSION"
     compile "com.google.dagger:dagger:$DAGGER_VERSION"
     testApt "com.google.dagger:dagger-compiler:$DAGGER_VERSION"
 
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:25.3.1'
-    compile 'com.android.support.constraint:constraint-layout:1.0.1'
+    compile fileTree(dir: "libs", include: ["*.jar"])
+    compile "com.android.support:appcompat-v7:25.3.1"
+    compile "com.android.support.constraint:constraint-layout:1.0.1"
 
-    testCompile 'junit:junit:4.12'
+    testCompile "junit:junit:4.12"
+    testCompile "org.mockito:mockito-core:2.8.9"
 
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
+    androidTestCompile("com.android.support.test.espresso:espresso-core:2.2.2", {
+        exclude group: "com.android.support", module: "support-annotations"
     })
-    androidTestCompile('com.schibsted.spain:barista:1.1.0') {
-        exclude group: 'com.android.support'
+    androidTestCompile("com.schibsted.spain:barista:1.1.0") {
+        exclude group: "com.android.support"
     }
 }
