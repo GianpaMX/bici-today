@@ -1,4 +1,4 @@
-package io.github.gianpamx.bicitoday;
+package io.github.gianpamx.bicitoday.recording;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -8,6 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ViewSwitcher;
+
+import io.github.gianpamx.bicitoday.R;
 
 public class RecordingFragment extends Fragment {
     private View view;

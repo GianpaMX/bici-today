@@ -1,4 +1,4 @@
-package io.github.gianpamx.bicitoday;
+package io.github.gianpamx.bicitoday.recording;
 
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
@@ -6,6 +6,8 @@ import android.support.test.runner.AndroidJUnit4;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+
+import io.github.gianpamx.bicitoday.R;
 
 import static com.schibsted.spain.barista.BaristaAssertions.assertDisplayed;
 import static com.schibsted.spain.barista.BaristaClickActions.click;
