@@ -4,6 +4,7 @@ import dagger.Module;
 import dagger.Provides;
 import io.github.gianpamx.bicitoday.recording.RecordingActivity;
 import io.github.gianpamx.bicitoday.recording.RecordingPresenter;
+import io.github.gianpamx.bicitoday.recording.RecordingUseCase;
 
 @Module
 public class RecordingModule {
@@ -14,7 +15,12 @@ public class RecordingModule {
     }
 
     @Provides
-    public RecordingPresenter provideRecordingPresenter() {
-        return new RecordingPresenter();
+    public RecordingUseCase provideRecordingUseCase() {
+        return new RecordingUseCase();
+    }
+
+    @Provides
+    public RecordingPresenter provideRecordingPresenter(RecordingUseCase recordingUseCase) {
+        return new RecordingPresenter(recordingUseCase);
     }
 }

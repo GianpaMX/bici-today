@@ -29,6 +29,13 @@ public class RecordingActivity extends AppCompatActivity implements RecordingCon
         inject(this);
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        recordingPresenter.record();
+    }
+
     private void inject(RecordingActivity recordingActivity) {
         getRecordingComponent(recordingActivity).inject(recordingActivity);
     }

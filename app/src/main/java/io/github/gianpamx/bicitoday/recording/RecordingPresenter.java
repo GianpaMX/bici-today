@@ -2,8 +2,10 @@ package io.github.gianpamx.bicitoday.recording;
 
 public class RecordingPresenter {
     private View view;
+    private RecordingUseCase recordingUseCase;
 
-    public RecordingPresenter() {
+    public RecordingPresenter(RecordingUseCase recordingUseCase) {
+        this.recordingUseCase = recordingUseCase;
     }
 
     public void pause() {
@@ -12,6 +14,10 @@ public class RecordingPresenter {
 
     public void setView(View view) {
         this.view = view;
+    }
+
+    public void record() {
+        recordingUseCase.record();
     }
 
     public interface View {
