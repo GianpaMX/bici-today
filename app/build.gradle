@@ -45,8 +45,5 @@ dependencies {
     androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    androidTestCompile('com.schibsted.spain:barista:1.5.1') {
-        exclude group: 'com.android.support'
-    }
     implementation 'com.android.support:design:25.4.0'
 }
