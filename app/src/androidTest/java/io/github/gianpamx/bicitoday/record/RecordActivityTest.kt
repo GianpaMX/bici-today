@@ -24,5 +24,9 @@ class RecordActivityTest {
         onView(withId(R.id.recordFloatingActionButton)).perform(click())
 
         onView(withId(R.id.pauseFloatingActionButton)).check(matches(isDisplayed()))
+
+        onView(withId(R.id.pauseFloatingActionButton)).perform(click())
+
+        onView(withId(R.id.recordFloatingActionButton)).check(matches(isDisplayed()))
     }
 }

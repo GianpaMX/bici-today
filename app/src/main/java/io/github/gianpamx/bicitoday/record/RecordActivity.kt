@@ -34,5 +34,6 @@ class RecordActivity : LifecycleActivity(), RecordFragment.RecordFragmentContain
     }
 
     override fun onPauseClick() {
+        presenter.pause()
     }
 }

@@ -29,4 +29,8 @@ class RecordPresenter(private val getExerciseUseCase: GetExerciseUseCase, val vi
         fun showPauseButton()
         fun showRecordButton()
     }
+
+    fun pause() {
+        view?.showRecordButton()
+    }
 }
