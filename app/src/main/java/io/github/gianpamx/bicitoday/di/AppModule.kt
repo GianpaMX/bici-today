@@ -6,7 +6,6 @@ import io.github.gianpamx.bicitoday.App
 import io.github.gianpamx.bicitoday.data.ExerciseLocalStorage
 import io.github.gianpamx.bicitoday.data.ExerciseRepository
 import io.github.gianpamx.bicitoday.usecase.GetExerciseUseCase
-import io.realm.Realm
 import javax.inject.Singleton
 
 @Module
